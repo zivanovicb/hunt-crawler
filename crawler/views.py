@@ -34,6 +34,7 @@ class Freelancer(APIView):
         bodytxt = (user.get('about'))
         photosrc = (user.get('logo_url'))
         urlic = 'https://www.freelancer.com/u/' + usernm
+        reviews = (user.get('eh_no_reviews'))
         dict = {
             'usernm' : usernm,
             'rating' : rating,
@@ -41,7 +42,8 @@ class Freelancer(APIView):
             'photosrc' : photosrc,
             'ratephr' : rate,
             'bodytxt' : bodytxt,
-            'country' : country
+            'country' : country,
+            'reviews' : reviews,
             }
         content.append(dict)
     return(content)
