@@ -3,7 +3,7 @@ import requests
 
 def getJobs():
     jobcont = []
-    soup = bs.BeautifulSoup(open('jobs.html'),'lxml')
+    soup = bs.BeautifulSoup(open('./jobs.html'),'lxml')
 #soup = bs.BeautifulSoup('jobs.html','html.parser')
     jobs = soup.find_all('li')
 
