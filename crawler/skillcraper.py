@@ -18,4 +18,3 @@ def getJobs():
 
     return jobcont
 
-print(getJobs())
