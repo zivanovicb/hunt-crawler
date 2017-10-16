@@ -26,13 +26,18 @@ class Freelancer(APIView):
 
     users = data.get('users')
     for user in users:
+        skills = []
         usernm = (user.get('username'))
-        print usernm
+        print(usernm)
         rating = (user.get('freelancer_reputation'))
         country = (user.get('country'))
         rate = (user.get('hourlyrate'))
         bodytxt = (user.get('about'))
         photosrc = (user.get('logo_url'))
+        reviews = (user.get('eh_no_reviews'))
+        skillist = (user.get('top_skills'))
+        for skill in skillist:
+            skills.append(skill['name'])
         urlic = 'https://www.freelancer.com/u/' + usernm
         dict = {
             'usernm' : usernm,
@@ -41,7 +46,9 @@ class Freelancer(APIView):
             'photosrc' : photosrc,
             'ratephr' : rate,
             'bodytxt' : bodytxt,
-            'country' : country
+            'country' : country,
+            'reviews' : reviews,
+            'skills' : skills,
             }
         content.append(dict)
     return(content)
