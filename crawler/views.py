@@ -39,6 +39,7 @@ class Freelancer(APIView):
         for skill in skillist:
             skills.append(skill['name'])
         urlic = 'https://www.freelancer.com/u/' + usernm
+        reviews = (user.get('eh_no_reviews'))
         dict = {
             'usernm' : usernm,
             'rating' : rating,
@@ -48,7 +49,10 @@ class Freelancer(APIView):
             'bodytxt' : bodytxt,
             'country' : country,
             'reviews' : reviews,
+<<<<<<< HEAD
             'skills' : skills,
+=======
+>>>>>>> 6107c05c533d26a0813c15599bc71d561d51fd42
             }
         content.append(dict)
     return(content)
