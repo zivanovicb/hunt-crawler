@@ -49,10 +49,7 @@ class Freelancer(APIView):
             'bodytxt' : bodytxt,
             'country' : country,
             'reviews' : reviews,
-<<<<<<< HEAD
             'skills' : skills,
-=======
->>>>>>> 6107c05c533d26a0813c15599bc71d561d51fd42
             }
         content.append(dict)
     return(content)
